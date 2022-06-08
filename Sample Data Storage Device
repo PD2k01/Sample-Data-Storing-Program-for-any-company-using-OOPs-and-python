@@ -1,0 +1,36 @@
+class Programmer:
+    company="PD Infotech"
+    def __init__(self,name,salary,age,qualification,product):
+        self.name=name
+        self.salary=salary
+        self.age=age
+        self.qualification=qualification
+        self.product=product
+    
+    def getInfo(self):
+        print(f"The name of the {self.company} programmer is:{self.name}")
+        print(f"The salary of the {self.company} programmer is:{self.salary}")
+        print(f"The age of the {self.company} programmer is:{self.age}")
+        print(f"The qualification of the {self.company} programmer is:{self.qualification}")
+        print(f"The product they are working on is:{self.product}")
+
+i=0
+a=int(input("Enter the number of employees:\n"))
+while(i<a):
+    name=input("Please Enter your name:\n")
+    salary=int(input("Please Enter your salary:\n"))
+    while(i<1000):
+        age=int(input("Please enter your age:\n"))
+        if(age>18 and age<=110):
+            break
+        else:
+            print("Enter a valid age\n")
+    i=i+1
+    qualification=input("Please enter your qualification:\n")
+    product=input("Enter the product you are working on:\n")
+    name=Programmer(name,salary,age,qualification,product)
+    name.getInfo()
+    print("Thank You! Please allow the next employee to fill the details\n\n")
+    i=i+1
+
+        
